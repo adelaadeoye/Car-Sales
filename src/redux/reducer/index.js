@@ -18,8 +18,8 @@ const initialState = {
     ]
   };
 
-  
-  function reducer(state=initialState, action){
+
+  export default function reducer(state=initialState, action){
       switch(action.type){
           case BUY_ITEM:
           return{
@@ -31,7 +31,7 @@ const initialState = {
           }
           case REMOVE_FEATURE:
               return{
-                  additionalFeatures:state.additionalFeatures-action.payload.price,
+                additionalPrice:state.additionalPrice-action.payload.price,
                   car:{
                       ...state.car, features:state.car.features.filter(item=>item !== action.payload)
                   },
