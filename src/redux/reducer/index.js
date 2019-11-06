@@ -18,6 +18,7 @@ const initialState = {
     ]
   };
 
+  
   function reducer(state=initialState, action){
       switch(action.type){
           case BUY_ITEM:
